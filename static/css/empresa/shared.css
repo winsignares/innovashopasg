@@ -1,0 +1,11 @@
+.empresa-general-input{
+    border: none;
+    box-sizing: border-box;
+    font-size: 12px;
+    padding: 5px;
+    margin: 0 2px;
+
+    border-radius: 14px;
+
+    box-shadow: 3px 3px 5px 3px rgba(0,0,0,0.2);
+}

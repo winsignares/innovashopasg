@@ -1,0 +1,116 @@
+body{
+  background-color: #f0f0f0;
+    font-family: "Inter", sans-serif;
+    font-optical-sizing: auto;
+    
+    }
+.container {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    border: 5cap;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+  #informes{
+    background-color:#38B6A0;
+  }
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    
+  }
+  h2 {
+    text-align: center;
+    padding-top: 2%;
+  }
+  
+  .padingtablas{
+    padding:7%;
+    padding-top:3%;
+  }
+  table th, table td {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  table th {
+    background-color: #007bff;
+    color: #fff;
+  }
+  
+  table tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  /* nav buscar */
+  .nav-buscar{
+    display: grid;
+    grid-template-columns: auto auto auto;
+    gap: 20px;
+    text-align: right;
+    width: 80%;
+    height: 10%;
+    justify-content: center;
+    height: 5%;
+    box-sizing: border-box;
+    border-radius: 20px;
+    
+    margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+  .num-elementos{
+   display: grid ;
+   grid-template-columns: auto auto;
+   margin-right: 10%;
+   border-radius: 20px;
+   width: 25%;
+   height: 5%;
+  }
+  #numElementos{
+    width: auto;
+  }
+  .buscador{
+    display: grid ;
+    grid-template-columns: auto auto auto;
+    border-radius: 20px;
+    width: 100%;
+  
+  }
+  #label-buscar{
+    margin-right: 10px;
+    text-align: center;
+    margin-top: 3px;
+  }
+  #search{
+    width: 100px;
+    height: 25px;
+    border-radius: 10px;
+  }
+  #butombuscar{
+    height: 25px;
+    width: 70px;
+    border-radius:10px ;
+    border-style: none;
+    background-color: #38b6a0;
+   color: white;
+  
+  }
+  .generar {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(0, 162, 255);
+    border-style: none;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .pdf {
+    height: 30px;
+    width: 30px;
+    background-color: rgb(255, 72, 0);
+    border-style: none;
+    border-radius: 5px;
+    color: #fff;
+  }

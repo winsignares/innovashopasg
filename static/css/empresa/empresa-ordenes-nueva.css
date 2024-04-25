@@ -1,0 +1,131 @@
+
+/* ! MAIN */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 18% 82%;
+
+    box-sizing: border-box;
+}
+
+.main-container .left-nav-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.main-container .main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+}
+
+/* ! LEFT-NAV */
+.left-nav-wrapper{
+    background-color: red;
+}
+
+.main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 25% 75%;
+
+    overflow: scroll;
+}
+
+.main-dashboard-empresa .top-banner{
+    width: 100%;
+
+    padding: 10px 10%;
+    box-sizing: border-box;
+
+    /* background-color: red; */
+}
+
+.main-section-dashboard{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 7px;
+    padding: 0 25px;
+    box-sizing: border-box;
+
+    /* background-color: red; */
+}
+
+
+/* ! ORDENES */
+.main-wrapper-nueva-orden{
+    display: grid;
+    grid-template-columns: 50% 50%;
+
+    height: 100%;
+    width: 100%;
+
+    box-sizing: border-box;
+    /* padding: 2%; */
+}
+
+/* * LEFT SIDE */
+.main-wrapper-nueva-orden .left-wrapper-orden{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.left-wrapper-orden h2{
+    width: 100%;
+}
+
+.left-wrapper-orden .search-producto{
+    width: 100%;
+
+    display: flex;
+    gap: 5px;
+}
+
+.left-wrapper-orden .producto-list-wrapper{
+    width: 100%;
+}
+
+.left-wrapper-orden .producto-list-wrapper table{
+    width: 100%;
+}
+
+/* * RIGHT SIDE */
+.main-wrapper-nueva-orden .right-wrapper-orden{
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    border-left: 1px solid black;
+    padding: 10px;
+}
+
+.right-wrapper-orden .productos-agregados-wrapper{
+    width: 100%;
+}
+
+.right-wrapper-orden .productos-agregados-wrapper table{
+    width: 100%;
+}
+
+

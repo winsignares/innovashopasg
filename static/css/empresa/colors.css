@@ -1,0 +1,37 @@
+:root {
+    --color1: #0070FF;
+    --color2: #9385F7;
+    --color3: #06D4C7;
+    --color4: #FC9A6B;
+    --color5: #FF6347;
+    --color6: #9385F7;
+    --color7: #FF69B4;
+}
+
+.color1 {
+    background-color: var(--color1);
+}
+
+.color2 {
+    background-color: var(--color2);
+}
+
+.color3 {
+    background-color: var(--color3);
+}
+
+.color4 {
+    background-color: var(--color4);
+}
+
+.color5 {
+    background-color: var(--color5);
+}
+
+.color6 {
+    background-color: var(--color6);
+}
+
+.color7 {
+    background-color: var(--color7);
+}

@@ -1,0 +1,113 @@
+
+/* ! MAIN */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  .main-container{
+    height: 100%;
+    width: 100%;
+  
+    display: grid;
+    grid-template-columns: 18% 82%;
+  
+    box-sizing: border-box;
+  }
+  
+  .main-container .left-nav-wrapper{
+    width: 100%;
+    height: 100%;
+  }
+  .main-container .main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* ! LEFT-NAV */
+  .left-nav-wrapper{
+    background-color: red;
+  }
+  
+  .main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+  
+    display: grid;
+    grid-template-rows: 25% 75%;
+  
+    overflow: scroll;
+  }
+  
+  .main-dashboard-empresa .top-banner{
+    width: 100%;
+  
+    padding: 10px 10%;
+    box-sizing: border-box;
+  
+    /* background-color: red; */
+  }
+  
+  .main-section-dashboard{
+    width: 100%;
+    height: 100%;
+  
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  
+    gap: 7px;
+    padding: 0 25px;
+    box-sizing: border-box;
+  
+    /* background-color: red; */
+  }
+  
+  
+  /* ! PROVEDOR CREAR */
+  .nuevo-provedor-wrapper{
+    width: 100%;
+  
+    display: grid;
+    grid-template-columns: 25% 75%;
+  
+    gap: 10px;
+  }
+  
+  .nuevo-provedor-wrapper .info-wrapper{
+    width: 100%;
+  
+    border-right: 1px solid black;
+  }
+  
+  .nuevo-provedor-wrapper .info-wrapper ul{
+    list-style-type: circle;
+  }
+  
+  .nuevo-provedor-wrapper .info-wrapper li{
+    margin-bottom: 5px;
+  }
+  
+  .nuevo-provedor-wrapper .form-wrapper{
+    width: 90%;
+    padding: 20px;
+  
+    box-sizing: border-box;
+  
+    border-radius: 12px;
+    background-color: #fafafa;
+  
+    /* -webkit-box-shadow: 7px 10px 28px 0px rgba(0,0,0,0.31);
+    -moz-box-shadow: 7px 10px 28px 0px rgba(0,0,0,0.31);
+    box-shadow: 7px 10px 28px 0px rgba(0,0,0,0.31); */
+  }
+  
+  .nuevo-provedor-wrapper .btn-container-wrapper{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+  }

@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Administrador | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+    rel="stylesheet"
+    />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    
+    <!-- * propio -->
+    <link rel="stylesheet" href="/static/css/administrador/administrador.css"/>
+    <link rel="stylesheet" href="/static/css/administrador/barra-de-navegacion.css">
+    <script src="/static/js/vendedor/vendedor.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      {% include 'administrador/barra-de-navegacion.html' %}
+
+      <div class="maincontent">
+        <div class="welcomcontainer">
+        <div class="welcom">
+          <div id="txtcontainer">
+              <div class="fecha">
+                <i class="fa fa-calendar-alt"></i>
+                <span class="fecha-text">25 de abril de 2024</span>
+              </div>
+              <div id="mensajebienvenida">ADMINISTRADOR</div>
+          </div>
+        </div>
+          <div id="imagecontainer">
+            <img id="logo" src="/static/imgs/vendedor/imagenes.png" alt="">
+          </div>
+        </div>
+        <div class="contenedor-tabla">
+          <table>
+            <thead>
+                <tr>
+                    <th>Nombre de la Empresa</th>
+                    <th>Fecha</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>ByteWave Solutions  </td>
+                    <td>2024-04-25</td>
+                    <td><div class="circulo verde"></div></td>
+                </tr>
+                <tr>
+                    <td>Nexus Innovations</td>
+                    <td>2024-04-26</td>
+                    <td><div class="circulo rojo"></div></td>
+                </tr>
+                <tr>
+                  <td>QuantumTech Systems  </td>
+                  <td>2024-04-26</td>
+                  <td><div class="circulo rojo"></div></td>
+              </tr>
+              <tr>
+                <td>Empresa 4</td>
+                <td>2024-04-26</td>
+                <td><div class="circulo verde"></div></td>
+            </tr>
+            <tr>
+              <td>Empresa 5</td>
+              <td>2024-04-26</td>
+              <td><div class="circulo rojo"></div></td>
+          </tr>
+          <tr>
+            <td>Empresa 6</td>
+            <td>2024-04-26</td>
+            <td><div class="circulo rojo"></div></td>
+        </tr>
+        <tr>
+          <td>Empresa 7</td>
+          <td>2024-04-26</td>
+          <td><div class="circulo rojo"></div></td>
+      </tr>
+              
+                <!-- Agrega más filas según sea necesario -->
+            </tbody>
+        </table>
+         </div>
+            <button class="boton-modulos">Módulos</button>
+          </div>
+          
+
+        </div>
+  </body>
+</html>
+
+

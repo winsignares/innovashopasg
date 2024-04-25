@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <!-- propios -->
+     <link rel="stylesheet" href="/static/css/vendedor/cotizacionesvendedor.css" />
+     <link rel="stylesheet" href="/static/css/vendedor/vercotizacionvendedor.css" />
+     <link rel="stylesheet" href="/static/css/vendedor/barra-nav-izq.css" />
+      <script src="/static/js/vendedor/vendedor_cotizaciones.js"defer></script>
+    </head>
+<body>
+<div class="main-container">
+    {% include 'vendedor/barra-nav-izq.html' %}
+
+    <div class="cotizacion-ver-wrapper">
+        <div class="cotizacion-detalle">
+            <h2>Detalle de la cotización</h2>
+    
+            <div class="info-wrapper-cliente">
+                <p><b>Razón social: </b>Juan Perez</p>
+                <p><b>Vendedor: </b>María Garcia</p>
+                <p><b>Fecha: </b>15/mato/2024</p>
+                <p><b>Estado: </b>Compra</p>
+                <br>
+                <button class="btn btn-success">Generar factura (PDF)</button>
+            </div>
+    
+            <hr>
+    
+            <h4>Listado de productos</h4>
+    
+            <table class="table table-striped table-hover">
+                <thead>
+                  <tr>
+                    <th scope="col">Código</th>
+                    <th scope="col">Razón social</th>
+                    <th scope="col">NIT o ID</th>
+                    <th scope="col">Se unió en</th>
+    
+                    <th scope="col">Ver</th>
+                  </tr>
+                </thead>
+    
+                <tbody>
+                    {%for i in range(5)%}
+                        <tr>
+                            <th scope="row">241221</th>
+                            <td>Seguridad y Trabajo S.A.S</td>
+                            <td>323311212432</td>
+                            <td>4/mayo/2024</td>
+    
+                            <td>
+                                <a
+                                    href="/empresa/ordenes/ver"
+                                    class="btn btn-warning"
+                                    title="Ver informe"
+                                >
+                                    <i class="fas fa-file"></i>
+                                </a>
+                            </td>
+                        </tr>
+                    {%endfor%}
+                </tbody>
+            </table>
+          </div>
+    </div>
+</div>
+</body>
+</html>

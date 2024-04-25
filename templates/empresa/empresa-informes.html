@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Empresa | Home</title>
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+            rel="stylesheet"
+        />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+        
+        <!-- * propio -->
+        <link rel="stylesheet" href="/static/css/empresa/colors.css">
+
+        <link rel="stylesheet" href="/static/css/empresa/barra-nav-izq-empresa.css">
+        <link rel="stylesheet" href="/static/css/empresa/big-banner-empresa.css">
+
+        <link rel="stylesheet" href="/static/css/empresa/calendario-empresa.css">
+        <script src="/static/js/empresa/empresa_calendario.js" defer></script>
+
+        <!-- * Shared -->
+        <link rel="stylesheet" href="/static/css/empresa/shared.css">
+
+        <!-- * Icono home -->
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
+
+        <!-- * Iconos font awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k4e0s16K3+HXadlk2vdq33yGT5r4msbR2AZd0Jb41e/WWWeC73RJkmbsUKM5Xv6m" crossorigin="anonymous">
+
+        <!-- * CSS -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+
+        <!-- * MODAL -->
+        <link rel="stylesheet" href="/static/css/empresa/empresa-modal.css">
+        <script src="/static/js/empresa/empresa-modal.js"></script>
+
+        <!-- * informe -->
+        <link rel="stylesheet" href="/static/css/empresa/empresa-informes.css">
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="left-nav-wrapper">
+                {% with activo = '' %}
+                    {% include "empresa/barra-nav-izq-empresa.html" %}
+                {% endwith %}
+            </div>
+
+            <div class="main-dashboard-empresa">
+                <div class="top-banner">
+                    {% with tituloBanner = 'Informes' %}
+                        {% include "empresa/big-banner-empresa.html" %}
+                    {% endwith %}
+                </div>
+
+                <div class="main-section-dashboard">
+                    <!-- ! OPCIONES -->
+                    <div class="informe-wrapper">
+                        <div class="search-wrapper">
+                            <h4>Buscar cliente:</h4>
+
+                            <label>Número de cliente o NIT:</label>
+                            <input type="text" class="empresa-general-input">
+
+                            <label>Razón social:</label>
+                            <input type="text" class="empresa-general-input">
+
+                            <button style="border-radius: 14px; margin-left: 15px" class="btn btn-warning">
+                                <i class="fas fa-search"></i>
+                                Buscar
+                            </button>
+
+                            <button style="margin-left: 80px;" class="btn btn-primary">
+                                <i class="fas fa-globe"></i>
+                                Generar informe general (pdf)
+                            </button>
+                        </div>
+
+                        <hr>
+                        
+                        <table class="table table-striped table-hover">
+                            <thead>
+                              <tr>
+                                <th scope="col">Código</th>
+                                <th scope="col">Razón social</th>
+                                <th scope="col">NIT o ID</th>
+                                <th scope="col">Se unió en</th>
+                              </tr>
+                            </thead>
+
+                            <tbody>
+                                {%for i in range(5)%}
+                                    <tr>
+                                        <th scope="row">241221</th>
+                                        <td>Seguridad y Trabajo S.A.S</td>
+                                        <td>323311212432</td>
+                                        <td>4/mayo/2024</td>
+
+                                        <td>
+                                            <a
+                                                href="/empresa/ordenes/ver"
+                                                class="btn btn-warning"
+                                                title="Ver informe"
+                                            >
+                                                <i class="fas fa-file"></i>
+                                            </a>
+                                        </td>
+                                    </tr>
+                                {%endfor%}
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+
+                
+                <div id="modalProductos" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        
+                        <div class="producto-modal">
+                            <h3>Editar vendedor</h3>
+
+                            <form action="#" method="post" style="width: 100%;">
+                                <div class="card">
+                                    <div class="card-header">
+                                        Editar descuento
+                                    </div>
+                                    <div class="card-body">
+                                        <div class="form-group">
+                                            <label for="nombre">Descuento (%):</label>
+                                            <input type="text" class="form-control" id="nombre" name="nombre" value="5">
+                                        </div>
+
+                                        <label>Tipo:</label> <br>
+                                        <select class="form-control" id="estado" name="estado">
+                                            <option value="activo" selected>Mensual</option>
+                                            <option value="inactivo">Semanal</option>
+                                            <option value="inactivo">Por días</option>
+                                        </select>
+
+                                        <div class="form-group">
+                                            <label for="nit">Fecha inicio:</label>
+                                            <input type="date" class="form-control" id="nit" name="nit">
+                                        </div>
+                                        
+                                        <div class="form-group">
+                                            <label for="direccion">Fecha fin:</label>
+                                            <input type="date" class="form-control" id="nit" name="nit">
+                                        </div>
+
+                                        <label>Dias (opcional):</label> <br>
+                                        <select class="form-control" id="estado" name="estado" multiple>
+                                            <option value="activo">Lunes</option>
+                                            <option value="inactivo">Martes</option>
+                                            <option value="inactivo">Miercoles</option>
+                                            <option value="inactivo">Jueves</option>
+                                            <option value="inactivo">Viernes</option>
+                                            <option value="inactivo">Sabado</option>
+                                            <option value="inactivo">Domingo</option>
+                                        </select>
+
+                                        <label>Estado:</label> <br>
+                                        <select class="form-control" id="estado" name="estado">
+                                            <option value="activo" selected>Activo</option>
+                                            <option value="inactivo">Inactivo</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </form>
+
+                            <br>
+                            
+                            <a
+                                class="btn btn-success"
+                            >
+                                <i class="fas fa-check"></i>
+                                Guardar cambios
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>

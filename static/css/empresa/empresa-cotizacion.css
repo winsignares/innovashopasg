@@ -1,0 +1,129 @@
+
+/* ! MAIN */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    height: 100vh;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 18% 82%;
+
+    box-sizing: border-box;
+}
+
+.main-container .left-nav-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.main-container .main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+}
+
+/* ! LEFT-NAV */
+.left-nav-wrapper{
+    background-color: red;
+}
+
+.main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 25% 75%;
+
+    overflow: scroll;
+
+}
+
+.main-dashboard-empresa .top-banner{
+    width: 100%;
+
+    padding: 10px 10%;
+    box-sizing: border-box;
+
+    /* background-color: red; */
+}
+
+
+.main-section-dashboard{
+    width: 100%;
+    height: 100%;
+
+    gap: 7px;
+    box-sizing: border-box;
+
+    /* background-color: red; */
+}
+
+/* * Configuracion */
+
+#cotizaciones{
+    background-color: #38b6a0;
+  }
+.container-listado-cotizaciones{
+width: 100%;
+height: 100%;
+/* display: grid;
+grid-template-rows: 25% auto; */
+padding-left: 7%;
+padding-right: 7%
+}
+.hacercotizacion-nav{
+padding-top: 6%;
+padding-left: 10%;
+padding-right: 10%;
+width: auto;
+}
+
+/* tabla */
+.tablacotizacion {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+ 
+}
+
+.tablacotizacion td, .tablacotizacion th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tablacotizacion tr:last-child td {
+  border-bottom: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+h2 {
+  text-align: center;
+  padding-top: 2%;
+}
+
+.padingtablas{
+  padding:7%;
+  padding-top:3%;
+}
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}

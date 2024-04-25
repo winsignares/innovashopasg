@@ -1,0 +1,97 @@
+
+/* ! MAIN */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 18% 82%;
+
+    box-sizing: border-box;
+}
+
+.main-container .left-nav-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.main-container .main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+}
+
+/* ! LEFT-NAV */
+.left-nav-wrapper{
+    background-color: red;
+}
+
+.main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 25% 75%;
+
+    overflow: scroll;
+}
+
+.main-dashboard-empresa .top-banner{
+    width: 100%;
+
+    padding: 10px 10%;
+    box-sizing: border-box;
+
+    /* background-color: red; */
+}
+
+.main-section-dashboard{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 7px;
+    padding: 0 25px;
+    box-sizing: border-box;
+
+    /* background-color: red; */
+}
+
+.inventario-wrapper{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+
+    gap: 10px;
+}
+
+.inventario-wrapper .card{
+    width: 100%;
+    height: fit-content;
+}
+
+.inventario-wrapper .card .card-body{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.inventario-wrapper .card img{
+    max-width: 100%;
+    max-height: 100%;
+
+    padding: 15px;
+    box-sizing: border-box;
+}
+
+

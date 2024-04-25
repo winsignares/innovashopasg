@@ -1,0 +1,30 @@
+/* * Cotizacion */
+.cotizacion-ver-wrapper{
+    width: 100%;
+    height: 100%;
+
+    overflow: scroll;
+}
+
+.cotizacion-detalle{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 3%;
+}
+
+.cotizacion-detalle h2{
+    width: 100%;
+    padding-left: 20px;
+}
+
+.cotizacion-detalle hr{
+    width: 100%;
+}
+
+.info-wrapper-cliente{
+    width: 100%;
+    padding-left: 40px;
+}

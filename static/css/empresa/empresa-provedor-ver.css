@@ -1,0 +1,90 @@
+
+/* ! MAIN */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 18% 82%;
+
+    box-sizing: border-box;
+}
+
+.main-container .left-nav-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.main-container .main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+}
+
+/* ! LEFT-NAV */
+.left-nav-wrapper{
+    background-color: red;
+}
+
+.main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 25% 75%;
+
+    overflow: scroll;
+}
+
+.main-dashboard-empresa .top-banner{
+    width: 100%;
+
+    padding: 10px 10%;
+    box-sizing: border-box;
+
+    /* background-color: red; */
+}
+
+.main-section-dashboard{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    gap: 7px;
+    padding: 0 25px;
+    box-sizing: border-box;
+
+    /* background-color: red; */
+}
+
+
+/* ! TABLA */
+.main-orden-wrapper{
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    padding: 1% 3%;
+}
+
+.main-orden-wrapper h2{
+    width: 100%;
+}
+
+.orden-details{
+    width: 100%;
+    height: fit-content;
+
+    padding-left: 40px;
+}

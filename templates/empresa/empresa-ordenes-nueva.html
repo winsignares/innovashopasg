@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Empresa | Home</title>
+
+        <!-- ! ESTILOS EXTERNOS -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+            rel="stylesheet"
+            />
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+        <!-- ! BOOTSTRAP -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+            
+        <!-- ! Shared -->
+        <link rel="stylesheet" href="/static/css/empresa/shared.css">
+        <link rel="stylesheet" href="/static/css/empresa/colors.css">
+        <link rel="stylesheet" href="/static/css/empresa/barra-nav-izq-empresa.css">
+        <link rel="stylesheet" href="/static/css/empresa/big-banner-empresa.css">
+
+        <!-- ! propio -->
+        <link rel="stylesheet" href="/static/css/empresa/empresa-ordenes-nueva.css">
+
+        <!-- * Iconos font awesome -->
+        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k4e0s16K3+HXadlk2vdq33yGT5r4msbR2AZd0Jb41e/WWWeC73RJkmbsUKM5Xv6m" crossorigin="anonymous"> -->
+    </head>
+
+    <body>
+        <div class="main-container">
+            <div class="left-nav-wrapper">
+                {% with activo = 'ordenes' %}
+                    {% include "empresa/barra-nav-izq-empresa.html" %}
+                {% endwith %}
+            </div>
+
+            <div class="main-dashboard-empresa">
+                <div class="top-banner">
+                    {% with tituloBanner = 'Ordenes de compra' %}
+                        {% include "empresa/big-banner-empresa.html" %}
+                    {% endwith %}
+                </div>
+
+                <!-- ! MAIN SECTION -->
+                <div class="main-section-dashboard">
+                    <!-- ! NUEVA ORDEN CONTAINER -->
+                    <div class="main-wrapper-nueva-orden">
+                        <div class="left-wrapper-orden">
+                            <h2>Nueva orden de compra</h2>
+
+                            <h5>Buscar producto:</h5>
+                            <div class="search-producto">
+                                <div>
+                                    <label class="form-label">Código:</label>
+                                    <input type="text" class="empresa-general-input">
+                                </div>
+
+                                <div>
+                                    <label class="form-label">Nombre:</label>
+                                    <input type="text" class="empresa-general-input">
+                                </div>
+
+                                <button class="btn btn-primary">
+                                    <i class="fas fa-search"></i>
+                                    Buscar
+                                </button>
+                            </div>
+
+                            <div class="producto-list-wrapper table-responsive">
+                                <table class="table table-striped ">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Código</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Provedor</th>
+                                        <th scope="col">Stock actual</th>
+
+                                        <th scope="col">Añadir</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for i in range(7) %}
+                                            <tr>
+                                                <th scope="row">3423</th>
+                                                <td>Cámara</td>
+                                                <td>Seguridad y Cámaras S.A.S</td>
+                                                <td>45</td>
+
+                                                <td>
+                                                    <button class="btn btn-warning">
+                                                        <i class="fas fa-plus"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+
+                        <div class="right-wrapper-orden">
+                            <h3>Productos agregados: </h3>
+                            <div class="productos-agregados-wrapper table-responsive">
+                                <table class="table table-hover table-striped">
+                                    <thead>
+                                      <tr>
+                                        <th scope="col">Código</th>
+                                        <th scope="col">Nombre</th>
+                                        <th scope="col">Provedor</th>
+                                        <th scope="col">Stock actual</th>
+
+                                        <th scope="col">Cantidad</th>
+                                        <th scope="col">Añadir</th>
+                                      </tr>
+                                    </thead>
+                                    <tbody>
+                                        {% for i in range(2) %}
+                                            <tr>
+                                                <th scope="row">3423</th>
+                                                <td>Cámara</td>
+                                                <td>Seguridad y Cámaras S.A.S</td>
+                                                <td>45</td>
+
+                                                <td>
+                                                    <input type="text" class="empresa-general-input">
+                                                </td>
+                                                <td>
+                                                    <button class="btn btn-danger">
+                                                        <i class="fas fa-minus"></i>
+                                                    </button>
+                                                </td>
+                                            </tr>
+                                        {% endfor %}
+                                    </tbody>
+                                  </table>
+                            </div>
+
+                            <button class="btn btn-success">
+                                <i class="fas fa-shopping-cart"></i>
+                                Generar orden de compra
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+        </div>
+    </body>
+</html>

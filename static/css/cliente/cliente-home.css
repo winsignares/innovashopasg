@@ -1,0 +1,141 @@
+
+/* ! MAIN */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.main-container{
+    height: 100%;
+    width: 100%;
+
+    display: grid;
+    grid-template-columns: 18% 82%;
+
+    box-sizing: border-box;
+}
+
+.main-container .left-nav-wrapper{
+    width: 100%;
+    height: 100%;
+}
+.main-container .main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+}
+
+/* ! LEFT-NAV */
+.left-nav-wrapper{
+    background-color: red;
+}
+
+.main-dashboard-empresa{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-rows: 25% 75%;
+}
+
+.main-dashboard-empresa .top-banner{
+    width: 100%;
+
+    padding: 10px 10%;
+    box-sizing: border-box;
+
+    /* background-color: red; */
+}
+
+
+.main-section-dashboard{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+
+    gap: 7px;
+    padding-left: 40px;
+    box-sizing: border-box;
+
+    overflow: scroll;
+
+    /* background-color: red; */
+}
+
+/* Opciones */
+
+.main-section-dashboard .opciones-wrapper{
+    width: 100%;
+    height: 100%;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    /* padding: 2%; */
+    gap: 3%;
+
+    box-sizing: border-box;
+
+    /* background-color: blue; */
+}
+
+.options-item-main-dashboard{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+
+    width: 100%;
+    height: fit-content;
+
+    align-items: center;
+
+    border-radius: 12px;
+
+    -webkit-box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.4);
+    -moz-box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.4);
+    box-shadow: 5px 5px 14px 0px rgba(0,0,0,0.4);
+
+    transition: box-shadow 200ms ease-in-out;
+    cursor: pointer;
+
+    color: white;
+    text-decoration: none;
+    /* background-color: red; */
+}
+
+.options-item-main-dashboard:hover{
+    box-shadow: none;
+}
+
+.options-item-main-dashboard .icon-options-item{
+    width: 100%;
+    height: 100%;
+
+    padding: 20%;
+    box-sizing: border-box;
+
+    display: grid;
+    place-items: center;
+}
+
+.icon-options-item i{
+    /* padding: 15%; */
+    box-sizing: border-box;
+    border-radius: 50%;
+
+    color: black;
+    background-color: white;
+
+    font-size: 35px;
+    padding: 10px;
+}
+
+
+/* Calendario */
+.main-section-dashboard .calendar-wrapper{
+    width: 100%;
+    height: 100%;
+}
+

@@ -1,0 +1,67 @@
+<div class="main-nav">
+    <div class="top-container">
+        <div class="img-user">
+            <img src="/static/imgs/empresa/img-user.jpg" alt="">
+        </div>
+
+        <div class="info-container">
+            <b><p>Andres Pollito</p></b>
+            <p>Empresa</p>
+        </div>
+    </div>
+
+    <div class="mid-container">
+        <hr>
+        <a
+            href="/cliente"
+            class="nav-menu-item  {% if activo == 'home' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-home"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Home
+                </label>
+            </div>
+        </a>
+
+        <a
+            href="/cliente/facturas"
+            class="nav-menu-item {% if activo == 'facturas' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-boxes"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Facturas
+                </label>
+            </div>
+        </a>
+
+        <a
+            href="/cliente/cotizaciones"
+            class="nav-menu-item {% if activo == 'cotizaciones' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-credit-card"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Cotizaciones
+                </label>
+            </div>
+        </a>
+
+
+        <hr>
+    </div>
+
+    <div class="bottom-container">
+       
+    </div>
+</div>

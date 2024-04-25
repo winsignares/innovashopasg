@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Empresas | Home</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+    />
+
+    <!-- * propio -->
+    <link rel="stylesheet" href="/static/css/administrador/empresas.css" />
+    <link
+      rel="stylesheet"
+      href="/static/css/administrador/barra-de-navegacion.css"
+    />
+    <script src="/static/js/vendedor/vendedor.js" defer></script>
+  </head>
+  <body>
+    <div class="container">
+      {% with activo = 'empresas' %}
+          {% include 'administrador/barra-de-navegacion.html' %}
+      {% endwith %}
+
+      <div class="maincontent">
+        <div class="welcomcontainer">
+          <div class="welcom">
+            <div id="txtcontainer">
+              <div class="fecha">
+                <i class="fa fa-calendar-alt"></i>
+                <span class="fecha-text">25 de abril de 2024</span>
+              </div>
+              <div id="mensajebienvenida">Administrador: Empresas</div>
+            </div>
+            <div id="imagecontainer">
+              <img id="logo" src="/static/imgs/vendedor/imagenes.png" alt="" />
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="accesorapido">
+            <a class="griditem" href="{{ url_for('crearempresa') }}">
+              <div class="botonaccess" id="botoncrearempresa">
+                <div class="imgcontainer">
+                  <img
+                    id="imagenitem"
+                    src="/static/imgs/vendedor/productboton.png"
+                    alt=""
+                  />
+                </div>
+                <div class="txboton">CREAR EMPRESA</div>
+              </div>
+            </a>
+
+            <a class="griditem" href="{{ url_for('eliminarempresa') }}">
+              <div class="botonaccess" id="botoneliminarempresa">
+                <div class="imgcontainer">
+                  <img
+                    id="imagenitem"
+                    src="/static/imgs/vendedor/cotizacionesnboton.png"
+                    alt=""
+                  />
+                </div>
+                <div class="txboton">ELIMINAR EMPRESA</div>
+              </div>
+            </a>
+          </div>
+
+          <div class="calaendar">
+            <div class="navigation">
+              <button id="prevMonth">&lt;</button>
+              <h2 id="month-year"></h2>
+              <button id="nextMonth">&gt;</button>
+            </div>
+
+            <div class="weekdays">
+              <div>Sun</div>
+              <div>Mon</div>
+              <div>Tue</div>
+              <div>Wed</div>
+              <div>Thu</div>
+              <div>Fri</div>
+              <div>Sat</div>
+            </div>
+            <div class="days" id="days"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

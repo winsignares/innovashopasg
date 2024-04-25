@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+      <!-- propios -->
+     <link rel="stylesheet" href="/static/css/vendedor/cotizacionesvendedor.css" />
+     <link rel="stylesheet" href="/static/css/vendedor/barra-nav-izq.css" />
+      <script src="/static/js/vendedor/vendedor_cotizaciones.js"defer></script>
+    </head>
+<body>
+<div class="main-container">
+    {% include 'vendedor/barra-nav-izq.html' %}
+
+    <div class="container-listado-cotizaciones">
+        
+        <div class="hacercotizacion-nav">
+            <h2><strong>listado de cotizaciones</strong></h2>
+            <button type="button" class="btn btn-warning" id="botonagregar"><i class="fas fa-plus"></i> hacer nueva cotización</button>
+
+        </div>
+    
+        <div class="listadocotizacion">
+
+            <table class="tablacotizacion">
+                
+                    <thead>
+                        <tr>
+                            <th>Cliente</th>
+                            <th>Vendedor</th>
+                            <th>Valor total</th>
+                            <th>Opciones</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        {% for i in range(1,5) %}
+                        <tr> 
+                            <td>Juan Pérez</td>
+                            <td>Maria García</td>
+                            <td>$100.00</td>
+                            <td><a href="/vendedor/vercotizacion" class="btn btn-primary"><i class="fas fa-eye"></i></a></td>
+                        </tr>
+                        {% endfor %}
+                    </tbody>
+                 
+              </table>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>

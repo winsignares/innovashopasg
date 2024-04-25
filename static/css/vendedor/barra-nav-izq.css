@@ -1,0 +1,95 @@
+.navegation {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 20% 60% 20%;
+  background-color: #031d2e;
+  height: 100vh;
+  width: 100%;
+}
+.userlogin {
+  display: grid;
+  height: 100%;
+  width: 100%;
+  grid-template-columns: 30% 70%;
+  justify-content: center;
+}
+.navegationcontet {
+  display: flex;
+  border-bottom: 1px solid white;
+  border-top: 1px solid white;
+  width: 100%;
+  flex-direction: column;
+  font-size: 13px;
+  -webkit-box-shadow: 7px 2px 9px -1px rgba(0, 0, 0, 0.34);
+  -moz-box-shadow: 7px 2px 9px -1px rgba(0, 0, 0, 0.34);
+  box-shadow: 7px 2px 9px -1px rgba(0, 0, 0, 0.34);
+}
+
+#configuracion {
+  height: 100%;
+  width: 100%;
+  margin-bottom: 0%;
+  margin-top: 0%;
+}
+.accesorapido {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 50%;
+  border: 5cap;
+  height: 100%;
+  width: 100%;
+}
+.profileuser {
+  margin-top: 60%;
+  margin-left: 10%;
+  color: wheat;
+  border-radius: 50%;
+  background-image: url(https://cdn.pixabay.com/photo/2012/04/26/19/43/profile-42914_1280.png);
+  height: 45%;
+}
+.nombreuser {
+  color: aliceblue;
+  display: flex;
+  text-align: left;
+  height: 100%;
+  width: 100%;
+  justify-content: center;
+
+  margin-left: 8%;
+  margin-bottom: 0%;
+  flex-direction: column;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  box-sizing: border-box;
+}
+.intemnavegation {
+  height: 100%;
+
+  box-sizing: border-box;
+  margin: 8% 2% 2% 0%;
+  color: azure;
+
+  display: grid;
+  grid-template-columns: 35% 65%;
+
+  border-radius: 2cap;
+
+  text-align: left;
+  align-items: center;
+
+  text-decoration: none;
+}
+
+.intemnavegation label {
+  text-decoration: none;
+}
+
+.intemnavegation:hover {
+  background-color: #09314b;
+}
+
+.imgnav {
+  width: 35px;
+  margin-left: 30px;
+  box-sizing: border-box;
+}

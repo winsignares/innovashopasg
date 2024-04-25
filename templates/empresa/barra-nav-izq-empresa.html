@@ -1,0 +1,124 @@
+<div class="main-nav">
+    <div class="top-container">
+        <div class="img-user">
+            <img src="/static/imgs/empresa/img-user.jpg" alt="">
+        </div>
+
+        <div class="info-container">
+            <b><p>Andres Pollito</p></b>
+            <p>Empresa</p>
+        </div>
+    </div>
+
+    <div class="mid-container">
+        <hr>
+        <a
+            href="/empresa"
+            class="nav-menu-item  {% if activo == 'home' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-home"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Home
+                </label>
+            </div>
+        </a>
+
+        <a
+            href="/empresa/inventario"
+            class="nav-menu-item {% if activo == 'inventario' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-boxes"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Inventario
+                </label>
+            </div>
+        </a>
+
+        <a
+            href="/empresa/ordenes"
+            class="nav-menu-item {% if activo == 'ordenes' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-credit-card"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Ordenes de compra
+                </label>
+            </div>
+        </a>
+
+        <a
+            href="/empresa/cotizaciones"
+            class="nav-menu-item {% if activo == 'cotizaciones' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-calculator"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Cotizaciones
+                </label>
+            </div>
+        </a>
+
+        <a
+            href="/empresa/provedores"
+            class="nav-menu-item {% if activo == 'provedores' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-truck"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Provedores
+                </label>
+            </div>
+        </a>
+
+        <a
+            href="/empresa/vendedores"
+            class="nav-menu-item {% if activo == 'vendedores' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-user"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Vendedores
+                </label>
+            </div>
+        </a>
+
+        <hr>
+    </div>
+
+    <div class="bottom-container">
+        <a
+            href="/empresa/configuracion"
+            class="nav-menu-item {% if activo == 'config' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-cog"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Configuracion
+                </label>
+            </div>
+        </a>
+    </div>
+</div>

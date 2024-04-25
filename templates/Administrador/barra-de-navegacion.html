@@ -1,0 +1,131 @@
+<div class="main-nav">
+    <div class="top-container">
+        <div class="img-user">
+            <img src="/static/imgs/empresa/img-user.jpg" alt="">
+        </div>
+
+        <div class="info-container">
+            <b><p>Andres Pollito</p></b>
+            <p>Administrador</p>
+        </div>
+    </div>
+
+    <div class="mid-container">
+        <hr>
+        <a
+            href="/administrador"
+            class="nav-menu-item  {% if activo == 'home' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-home"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Home
+                </label>
+            </div>
+        </a>
+
+        <a
+            href="/administrador/empresas"
+            class="nav-menu-item {% if activo == 'empresas' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-building"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Empresas
+                </label>
+            </div>
+        </a>
+
+        <a
+            href="/administrador/administrador"
+            class="nav-menu-item {% if activo == 'administrador' %}active-link{% endif %}"
+        >
+            <div class="icono-left-menu-item">
+                <i class="fas fa-boxes"></i>
+            </div>
+
+            <div class="texto-left-menu-item">
+                <label>
+                    Administrador
+                </label>
+            </div>
+        </a>
+
+        <hr>
+    </div>
+
+    <div class="bottom-container">
+        
+    </div>
+</div>
+
+
+<!-- <div class="navegation">
+    <div class="userlogin">
+        <div class="nombreuser">
+            <div class="img-user">
+                <img src="/static/imgs/empresa/img-user.jpg" alt="">
+                andres pollito
+                <div class="cargo">Administrador</div>
+                </div>
+            </div>
+    </div>
+
+    <div class="navegationcontet">
+        <a
+            class="intemnavegation"
+            id="home"
+            href="{{ url_for('administrador') }}"
+        >
+            <img
+                class="imgnav"
+                src="/static/imgs/vendedor/home.png"
+                alt=""
+            />
+        <label>Home</label>
+        </a>
+
+        <a
+        class="intemnavegation"
+        ,
+        id="Administrador"
+        href="{{ url_for('administrador_administrador') }}"
+        >
+        <img
+            class="imgnav"
+            src="/static/imgs/vendedor/productos.png"
+            alt=""
+        />Administrador
+        </a>
+
+        <a
+        class="intemnavegation"
+        ,
+        id="Empresas"
+        href="{{ url_for('empresas') }}"
+        >
+        <img
+            class="imgnav"
+            src="/static/imgs/vendedor/perfil.png"
+            alt=""
+        />Empresas
+        </a>
+
+        
+
+    </div>
+
+    <div class="intemnavegation" id="configuracion">
+        <img
+        class="imgnav"
+        src="/static/imgs/vendedor/config.png"
+        alt=""
+        />configuration
+    </div>
+</div> -->

@@ -1,0 +1,86 @@
+body{
+  background-color:  #f0f0f0;
+  font-family: "Inter", sans-serif;
+  font-optical-sizing: auto;
+  
+  }
+.main-container {
+    display: grid;
+    grid-template-columns: 15% 85%;
+    border: 5cap;
+    height: 100vh;
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+  }
+  #cotizaciones{
+    background-color: #38b6a0;
+  }
+.container-listado-cotizaciones{
+width: 100%;
+height: 100%;
+display: grid;
+grid-template-rows: 25% auto;
+padding-left: 7%;
+padding-right: 7%
+}
+.hacercotizacion-nav{
+padding-top: 6%;
+padding-left: 10%;
+padding-right: 10%;
+width: auto;
+}
+
+/* tabla */
+.tablacotizacion {
+  width: 100%;
+  border-collapse: collapse;
+  border: 1px solid #ddd;
+ 
+}
+
+.tablacotizacion td, .tablacotizacion th {
+  padding: 8px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.tablacotizacion tr:last-child td {
+  border-bottom: none;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  
+}
+h2 {
+  text-align: center;
+  padding-top: 2%;
+}
+
+.padingtablas{
+  padding:7%;
+  padding-top:3%;
+}
+table th, table td {
+  padding: 10px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+table th {
+  background-color: #007bff;
+  color: #fff;
+}
+
+table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+.ver {
+  height: 30px;
+  width: 30px;
+  background-color: rgb(25, 0, 255);
+  border-style: none;
+  border-radius: 5px;
+  color: #fff;
+}
