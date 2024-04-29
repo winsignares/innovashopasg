@@ -81,6 +81,11 @@ html, body {
     box-sizing: border-box;
 }
 
+.btn-wrapper{
+    width: 100%;
+    padding: 20px;
+}
+
 .configuracion-wrapper h2{
     width: 100%;
 }
