@@ -1,12 +1,12 @@
 body {
-  background-color: #f0ebeb;
+  /* background-color: #f0ebeb; */
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
 
   margin: 0;
 }
 
-.container {
+.container-main {
   display: grid;
   grid-template-columns: 15% 85%;
   border: 5cap;
@@ -21,6 +21,8 @@ body {
   height: 100%;
   width: 100%;
   border: 5cap;
+
+  overflow: scroll;
 }
 
 .calendar {
@@ -67,7 +69,7 @@ body {
 }
 
 #home {
-  background-color: #38b6a0;
+  /* background-color: #38b6a0; */
 }
 
 #bienvenido {
@@ -104,9 +106,10 @@ body {
 
 .panel {
   display: grid;
-  grid-template-columns: 60% 40%;
+  grid-template-columns: 1fr;
   grid-template-rows: 1fr;
-  border: 5cap;
+  gap: 20px;
+  padding: 5%;
   height: 100%;
   width: 100%;
 }

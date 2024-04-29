@@ -75,10 +75,16 @@
                                 Buscar
                             </button>
 
-                            <button style="margin-left: 80px;" class="btn btn-primary">
+                           
+                            <a
+                                style="margin-left: 80px;"
+                                class="btn btn-primary"
+                                href="/static/informeEjemplo.pdf"
+                                download="nombre_del_archivo"
+                            >
                                 <i class="fas fa-globe"></i>
                                 Generar informe general (pdf)
-                            </button>
+                            </a>
                         </div>
 
                         <hr>
@@ -90,6 +96,7 @@
                                 <th scope="col">Razón social</th>
                                 <th scope="col">NIT o ID</th>
                                 <th scope="col">Se unió en</th>
+                                <th scope="col">Informe (PDF)</th>
                               </tr>
                             </thead>
 
@@ -103,9 +110,10 @@
 
                                         <td>
                                             <a
-                                                href="/empresa/ordenes/ver"
-                                                class="btn btn-warning"
+                                                class="btn btn-danger"
                                                 title="Ver informe"
+                                                href="/static/informeEjemplo.pdf"
+                                                download="nombre_del_archivo"
                                             >
                                                 <i class="fas fa-file"></i>
                                             </a>
@@ -116,8 +124,6 @@
                         </table>
                     </div>
                 </div>
-
-
                 
                 <div id="modalProductos" class="modal">
                     <div class="modal-content">

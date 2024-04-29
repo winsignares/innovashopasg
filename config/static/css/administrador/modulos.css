@@ -211,7 +211,7 @@ h1 {
 }
 
 .boton {
-  background-color: #4caf50;
+  background-color: #52ea57;
   color: white;
   padding: 15px 20px;
   border: none;
@@ -230,4 +230,10 @@ h1 {
 
 .boton-inactivo{
   background-color: red;
+}
+
+.btn-wrapper{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 10px;
 }
