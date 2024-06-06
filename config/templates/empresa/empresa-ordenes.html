@@ -27,8 +27,16 @@
         <!-- ! propio -->
         <link rel="stylesheet" href="/static/css/empresa/empresa-ordenes.css">
 
+        
+        <!-- * AXIOS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- * Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- ! JS -->
+        <script src="/static/js/empresa/empresa-ordenes.js" defer></script>
+
         <!-- * Iconos font awesome -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k4e0s16K3+HXadlk2vdq33yGT5r4msbR2AZd0Jb41e/WWWeC73RJkmbsUKM5Xv6m" crossorigin="anonymous"> -->
     </head>
 
     <body>
@@ -50,7 +58,7 @@
                 <div class="main-section-dashboard">
                     <!-- ! OPCIONES -->
                     <div class="ordenes-wrapper">
-                        <h2>Listado de ordenes de compra</h2>
+                        <h2>Listado de ordenes de compraaa</h2>
 
                         <div class="ordenes-btn-wrapper">
                             <a
@@ -67,7 +75,6 @@
                               <tr>
                                 <th scope="col">ID</th>
                                 <th scope="col">Código</th>
-                                <th scope="col">Provedor</th>
                                 <th scope="col">Cantidad de productos</th>
                                 <th scope="col">Valor total (pesos)</th>
 
@@ -76,25 +83,6 @@
                             </thead>
 
                             <tbody>
-                                {%for i in range(5)%}
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>1212432</td>
-                                        <td>Seguridad y Trabajo S.A.S</td>
-                                        <td>12</td>
-                                        <td>$ 2.400.000</td>
-
-                                        <td>
-                                            <a
-                                                href="/empresa/ordenes/ver"
-                                                class="btn btn-primary"
-                                                title="Ver orden de compra"
-                                            >
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                {%endfor%}
                             </tbody>
                         </table>
                     </div>

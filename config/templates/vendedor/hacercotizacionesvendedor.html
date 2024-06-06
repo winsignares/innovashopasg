@@ -6,7 +6,14 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
 
-    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.all.min.js
+    "></script>
+    <link href="
+    https://cdn.jsdelivr.net/npm/sweetalert2@11.11.0/dist/sweetalert2.min.css
+    " rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <link rel="stylesheet" href="/static/css/vendedor/hacercotizaciones.css">
     <link rel="stylesheet" href="/static/css/vendedor/barra-nav-izq.css">
     <script src="/static/js/vendedor/vendedor_hacercotizaciones.js" defer></script>
@@ -66,23 +73,15 @@
             <table id="myTable">
               <thead>
                 <tr>
-                  <th>ID</th>
+                  <th>cedula</th>
+                  <th>id</th>
                   <th>Nombre</th>
                   <th>Compras Hechas</th>
                   <th>Opciones</th>
                 </tr>
               </thead>
               <tbody id="tableBody">
-                {%for i in range(1,6)%}
-                <tr>
-                  <td>{{ i }}</td>
-                  <td>Cliente A</td>
-                  <td>5</td>
-                  <td>
-                      <button class="agregar"><i class="fas fa-user-plus"></i></button>
-                  </td>
-                </tr>
-                {%endfor%}
+               
               </tbody>
             </table>
             <div id="pagination" class="pagination"></div>
@@ -107,40 +106,26 @@
                   </div>
   
                   <div class="buscar">
-                    <label for="busca">Buscar por ID:</label>
-                    <input type="text" id="busca" />
-                    <button onclick="buscar()" id="buton-buscar">Buscar</button>
+                    <label for="search">Buscar por ID:</label>
+                    <input type="text" id="search1" />
+                    <button onclick="buscar1()" id="buton-buscar" class="search">Buscar</button>
                   </div>
                 </div>
   
                 <table id="Table-productos">
                   <thead>
                     <tr>
-                      <th>ID </th>
+                      <th>id </th>
                       <th>Nombre </th>
                       <th>Stock</th>
                       <th>Proveedor</th>
-                      <th>Descripción</th>
-                      <th>Cantidad</th>
+                      <th>Descripción</th>                
                       <th>Agregar</th>
                     </tr>
                   </thead>
                   <tbody id="tableBody-productos">
                     <!-- Los datos de la tabla se cargarán dinámicamente aquí -->
-                    {% for i in range(1,5) %}
-                    <tr>
-                      <td>{{ i }}</td>
-                      <td>Lámpara LED</td>
-                      <td>
-                        <span class="stock rojo"></span>
-                        5
-                      </td>
-                      <td>Proveedor A</td>
-                      <td>Lámpara LED de bajo consumo.</td>
-                      <td><input type="number" class="cantidad"></td>
-                      <td><button class="agregar"><i class="fas fa-cart-plus"></i></button></td>
-                    </tr>
-                    {% endfor %} 
+                   
                   </tbody>
                 </table>
                 <div id="paginacion" class="paginacion"></div>
@@ -150,7 +135,7 @@
                 <table class="producttable">
                   <th>nombre</th>
                   <th>cantidad</th>
-                  <th>ver</th>
+                   <th>opciones</th>
                 </table>
               </div>
             </div>
@@ -160,45 +145,16 @@
         <!-- paso de confirmar compra -->
         <div class="step-content" id="step3">
             <div  class="containercompra">
-                <div class="resumen-compra">
-                  
-                <div class="card-item-ultimo-paso">
-                    <img src="/static/imgs/vendedor/mueble.webp" alt="Mueble">
-                    <div class="info-item">
-                        <h2>Sofá de Cuero Negro</h2>
-                        <p><strong>Precio:</strong> $699.99</p>
-                        <p><strong>Detalles:</strong></p>
-                        <ul>
-                            <li>Material: Cuero genuino</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="card-item-ultimo-paso">
-                  <img src="/static/imgs/vendedor/mueble.webp" alt="Mueble">
-                  <div class="info-item">
-                      <h2>Sofá de Cuero Negro</h2>
-                      <p><strong>Precio:</strong> $699.99</p>
-                      <p><strong>Detalles:</strong></p>
-                      <ul>
-                          <li>Material: Cuero genuino</li>
-                          <li>Color: Negro</li>
-                          <li>cantidad: 200</li>
-                      </ul>
-                  </div>
-              </div>
-
-
-                </div>
+              <div class="cards-container"></div>
                 <div class="total-compra">
                   <div class="resumen">
                     <h2>Resumen de Compra</h2>
                     <div class="linea"></div>
-                    <p><strong>Subtotal:</strong> $699.99</p>
-                    <p><strong>Subtotal:</strong> $699.99</p>
+                    <p><strong>Total:</strong> <span id="total-placeholder">$</span></p>
                     <div class="linea"></div>
                     <div class="botones">
-                        <button class="comprar-btn">Hacer Compra</button>
-                        <button class="cotizacion-btn">Generar Cotización</button>
+                        <button class="crearcotizacion" onclick="hacercotizacion('1')" >Hacer Compra</button>
+                        <button class="crearcotizacion" onclick="hacercotizacion('0') ">Generar Cotización</button>
                     </div>
                 </div>
                 </div>

@@ -192,7 +192,7 @@ input[type="submit"] {
     margin-left: 10%;
     margin-right: 10%;
     display: grid;
-    grid-template-columns: 40% auto;
+    grid-template-columns: 40% 60%;
     background-color: #ffffff;
     margin-top: 1px;
     margin-bottom: 20px;
@@ -268,4 +268,6 @@ padding-left: 15%;
     margin-left: 17%;
    }
 
-
+   .campo-vacio:required:invalid {
+    border-color: red;
+  }

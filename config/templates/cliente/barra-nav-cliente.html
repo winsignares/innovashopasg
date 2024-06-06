@@ -1,67 +1,85 @@
-<div class="main-nav">
-    <div class="top-container">
-        <div class="img-user">
-            <img src="/static/imgs/empresa/img-user.jpg" alt="">
-        </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 
-        <div class="info-container">
+    <script src="/static/js/cliente/barra-nav-cliente.js" defer></script>
+
+</head>
+<body>
+    <div class="main-nav">
+        <div class="top-container">
+          <div class="img-user">
+            <img src="/static/imgs/empresa/img-user.jpg" alt="" />
+          </div>
+      
+          <div class="info-container">
             <b><p>Andres Pollito</p></b>
             <p>Cliente</p>
+          </div>
         </div>
-    </div>
-
-    <div class="mid-container">
-        <hr>
-        <a
+      
+        <div class="mid-container">
+          <hr />
+          <a
             href="/cliente"
-            class="nav-menu-item  {% if activo == 'home' %}active-link{% endif %}"
-        >
+            class="nav-menu-item {% if activo == 'home' %}active-link{% endif %}"
+          >
             <div class="icono-left-menu-item">
-                <i class="fas fa-home"></i>
+              <i class="fas fa-home"></i>
             </div>
-
+      
             <div class="texto-left-menu-item">
-                <label>
-                    Home
-                </label>
+              <label> Home </label>
             </div>
-        </a>
-
-        <a
+          </a>
+      
+          <a
             href="/cliente/facturas"
             class="nav-menu-item {% if activo == 'facturas' %}active-link{% endif %}"
-        >
+          >
             <div class="icono-left-menu-item">
-                <i class="fas fa-boxes"></i>
+              <i class="fas fa-boxes"></i>
             </div>
-
+      
             <div class="texto-left-menu-item">
-                <label>
-                    Facturas
-                </label>
+              <label> Facturas </label>
             </div>
-        </a>
-
-        <a
+          </a>
+      
+          <a
             href="/cliente/cotizaciones"
             class="nav-menu-item {% if activo == 'cotizaciones' %}active-link{% endif %}"
-        >
+          >
             <div class="icono-left-menu-item">
-                <i class="fas fa-credit-card"></i>
+              <i class="fas fa-credit-card"></i>
             </div>
-
+      
             <div class="texto-left-menu-item">
-                <label>
-                    Cotizaciones
-                </label>
+              <label> Cotizaciones </label>
             </div>
-        </a>
-
-
-        <hr>
-    </div>
-
-    <div class="bottom-container">
-       
-    </div>
-</div>
+          </a>
+      
+          <hr />
+        </div>
+      
+        <div class="bottom-container">
+          <a
+            onclick="logout()"
+            class="nav-menu-item {% if activo == 'config' %}active-link{% endif %}"
+          >
+            <div class="icono-left-menu-item">
+              <i class="fas fa-door-open"></i>
+            </div>
+      
+            <div class="texto-left-menu-item">
+              <label> Cerrar sesión </label>
+            </div>
+          </a>
+        </div>
+      </div>
+      
+</body>
+</html>

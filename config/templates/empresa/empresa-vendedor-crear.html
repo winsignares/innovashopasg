@@ -30,7 +30,17 @@
 
 
         <!-- * Iconos font awesome -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k4e0s16K3+HXadlk2vdq33yGT5r4msbR2AZd0Jb41e/WWWeC73RJkmbsUKM5Xv6m" crossorigin="anonymous"> -->
+
+        
+     
+        <!-- * COTIZACION -->
+        <!-- * AXIOS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- * Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- ! JS -->
+        <script src="/static/js/empresa/empresa-vendedores-crear.js" defer></script>
     </head>
 
     <body>
@@ -70,29 +80,39 @@
                                 <div class="row">
                                     <div class="col">
                                         <label>Nombres:</label>
-                                        <input type="text" class="form-control">
+                                        <input id="nombres" type="text" class="form-control">
                                     </div>
     
                                     <div class="col">
                                         <label>Apellidos:</label>
-                                        <input type="number" class="form-control">
+                                        <input id="apellidos" type="text" class="form-control">
+                                    </div>
+
+                                    <div class="col">
+                                        <label>Telefono:</label>
+                                        <input id="telefono" type="tel" class="form-control">
                                     </div>
                                     
                                     <div class="col">
                                         <label>Cédula:</label>
-                                        <input type="text" class="form-control">
+                                        <input  id="cedula" type="number" class="form-control">
                                     </div>
                                 </div>
                                 
                                 <div class="row">
                                     <div class="col">
                                         <label>Dirección:</label>
-                                        <input type="text" class="form-control">
+                                        <input id="direccion" type="text" class="form-control">
                                     </div>
 
                                     <div class="col">
                                         <label>Usuario:</label>
-                                        <input type="text" class="form-control">
+                                        <input  id="usuario" type="text" class="form-control">
+                                    </div>
+
+                                    <div class="col">
+                                        <label>Clave:</label>
+                                        <input  id="clave" type="password" class="form-control">
                                     </div>
 
                                     <div class="col"></div>
@@ -100,7 +120,7 @@
                             </form>
     
                             <div class="btn-container-wrapper">
-                                <button class="btn btn-success">
+                                <button id="guardar" class="btn btn-success">
                                     Guardar
                                 </button>
     

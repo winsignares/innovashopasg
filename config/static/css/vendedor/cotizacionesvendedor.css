@@ -20,7 +20,7 @@ body{
 width: 100%;
 height: 100%;
 display: grid;
-grid-template-rows: 25% auto;
+grid-template-rows:auto auto;
 padding-left: 7%;
 padding-right: 7%
 }
@@ -28,6 +28,7 @@ padding-right: 7%
 padding-top: 6%;
 padding-left: 10%;
 padding-right: 10%;
+padding-bottom: 15px;
 width: auto;
 }
 

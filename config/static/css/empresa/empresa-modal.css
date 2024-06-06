@@ -39,28 +39,28 @@
     cursor: pointer;
 }
 
-.producto-modal{
+.emmpresa-modal{
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.producto-modal h3{
+.emmpresa-modal h3{
     width: 100%;
 }
 
-.producto-modal .info-producto{
+.emmpresa-modal .info-producto{
     width: 100%;
     font-size: 14px;
 }
 
-.producto-modal .img-container{
+.emmpresa-modal .img-container{
     width: 100%;
     display: grid;
     place-items: center;
 }
 
-.producto-modal .img-container img{
+.emmpresa-modal .img-container img{
     width: 150px;
     padding: 10px;
 }

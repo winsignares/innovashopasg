@@ -1,131 +1,83 @@
-<div class="main-nav">
-    <div class="top-container">
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="/static/js/administrador/barra-de-navegacion.js" defer></script>
+  </head>
+  <body>
+    <div class="main-nav">
+      <div class="top-container">
         <div class="img-user">
-            <img src="/static/imgs/empresa/img-user.jpg" alt="">
+          <img src="/static/imgs/empresa/img-user.jpg" alt="" />
         </div>
 
         <div class="info-container">
-            <b><p>Andres Pollito</p></b>
-            <p>Administrador</p>
+          <b><p>Andres Pollito</p></b>
+          <p>Administrador</p>
         </div>
-    </div>
+      </div>
 
-    <div class="mid-container">
-        <hr>
+      <div class="mid-container">
+        <hr />
         <a
-            href="/administrador"
-            class="nav-menu-item  {% if activo == 'home' %}active-link{% endif %}"
+          href="/administrador"
+          class="nav-menu-item {% if activo == 'home' %}active-link{% endif %}"
         >
-            <div class="icono-left-menu-item">
-                <i class="fas fa-home"></i>
-            </div>
+          <div class="icono-left-menu-item">
+            <i class="fas fa-home"></i>
+          </div>
 
-            <div class="texto-left-menu-item">
-                <label>
-                    Home
-                </label>
-            </div>
+          <div class="texto-left-menu-item">
+            <label> Home </label>
+          </div>
         </a>
 
         <a
-            href="/administrador/empresas"
-            class="nav-menu-item {% if activo == 'empresas' %}active-link{% endif %}"
+          href="/administrador/empresas"
+          class="nav-menu-item {% if activo == 'empresas' %}active-link{% endif %}"
         >
-            <div class="icono-left-menu-item">
-                <i class="fas fa-building"></i>
-            </div>
+          <div class="icono-left-menu-item">
+            <i class="fas fa-building"></i>
+          </div>
 
-            <div class="texto-left-menu-item">
-                <label>
-                    Empresas
-                </label>
-            </div>
+          <div class="texto-left-menu-item">
+            <label> Empresas </label>
+          </div>
         </a>
 
         <a
-            href="/administrador/administrador"
-            class="nav-menu-item {% if activo == 'administrador' %}active-link{% endif %}"
+          href="/administrador/administrador"
+          class="nav-menu-item {% if activo == 'administrador' %}active-link{% endif %}"
         >
-            <div class="icono-left-menu-item">
-                <i class="fas fa-boxes"></i>
-            </div>
+          <div class="icono-left-menu-item">
+            <i class="fas fa-boxes"></i>
+          </div>
 
-            <div class="texto-left-menu-item">
-                <label>
-                    Administrador
-                </label>
-            </div>
+          <div class="texto-left-menu-item">
+            <label> Administrador </label>
+          </div>
         </a>
 
-        <hr>
-    </div>
+        <hr />
+      </div>
 
-    <div class="bottom-container">
-        
-    </div>
-</div>
-
-
-<!-- <div class="navegation">
-    <div class="userlogin">
-        <div class="nombreuser">
-            <div class="img-user">
-                <img src="/static/imgs/empresa/img-user.jpg" alt="">
-                andres pollito
-                <div class="cargo">Administrador</div>
-                </div>
-            </div>
-    </div>
-
-    <div class="navegationcontet">
+      <div class="bottom-container">
         <a
-            class="intemnavegation"
-            id="home"
-            href="{{ url_for('administrador') }}"
+          onclick="logout()"
+          class="nav-menu-item {% if activo == 'logout' %}active-link{% endif %}"
         >
-            <img
-                class="imgnav"
-                src="/static/imgs/vendedor/home.png"
-                alt=""
-            />
-        <label>Home</label>
+          <div class="icono-left-menu-item">
+            <i class="fas fa-door-open"></i>
+          </div>
+
+          <div class="texto-left-menu-item">
+            <label> Cerrar sesión </label>
+          </div>
         </a>
-
-        <a
-        class="intemnavegation"
-        ,
-        id="Administrador"
-        href="{{ url_for('administrador_administrador') }}"
-        >
-        <img
-            class="imgnav"
-            src="/static/imgs/vendedor/productos.png"
-            alt=""
-        />Administrador
-        </a>
-
-        <a
-        class="intemnavegation"
-        ,
-        id="Empresas"
-        href="{{ url_for('empresas') }}"
-        >
-        <img
-            class="imgnav"
-            src="/static/imgs/vendedor/perfil.png"
-            alt=""
-        />Empresas
-        </a>
-
-        
-
+      </div>
     </div>
-
-    <div class="intemnavegation" id="configuracion">
-        <img
-        class="imgnav"
-        src="/static/imgs/vendedor/config.png"
-        alt=""
-        />configuration
-    </div>
-</div> -->
+  </body>
+</html>

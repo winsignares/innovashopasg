@@ -18,7 +18,7 @@
     />
 
     <!-- ! MODAL -->
-    <script src="/static/js/empresa/empresa-modal.js" defer></script>
+    <!-- <script src="/static/js/empresa/empresa-modal.js" defer></script> -->
     <link rel="stylesheet" href="/static/css/empresa/empresa-modal.css" />
 
     <!-- ! BOOTSTRAP -->
@@ -35,7 +35,16 @@
       rel="stylesheet"
       href="/static/css/administrador/barra-de-navegacion.css"
     />
-    <script src="/static/js/vendedor/vendedor.js" defer></script>
+    <!-- <script src="/static/js/vendedor/vendedor.js" defer></script> -->
+
+    <!-- * AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- * Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- ! JS -->
+    <script src="/static/js/administrador/modulos-empresa.js" defer></script>
+
   </head>
   <body>
     <div class="container-main">
@@ -61,36 +70,17 @@
           <h2>Detalles de la empresa</h2>
 
           <div class="info-empresa">
-            <p><b>Razón rocial: </b>Distribuidores S.A.S</p>
-            <p><b>NIT: </b>1248291821</p>
-            <p><b>Fecha unión: </b>14/abril/2023</p>
+            <p><b>Razón social: </b><span id="nombre-empresa"></span></p>
+            <p><b>NIT: </b><span id="nit-empresa"></span></p>
+            <p><b>Correo electrónico: </b><span id="correo-empresa"></span></p>
+            <p><b>Porcentaje de ganancia: </b><span id="porcentaje-empresa"></span></p>
+            <p><b>IVA establecido: </b><span id="iva-empresa"></span></p>
+            <p><b>Descuento general: </b><span id="descuento-empresa"></span></p>
+            <p><b>Vigencia de la licencia: </b><span id="vigencia-empresa"></span></p>
           </div>
+
           <h1>Módulos:</h1>
-          <div class="botones">
-            <button class="boton boton-inactivo">
-              Cotización
-              <div onclick="showModal('{{ i }}')" class="btn btn-success">
-                Habilitar
-              </div>
-            </button>
-            <button class="boton boton-activo">
-              Informes
-              <div onclick="showModal('{{ i }}')" class="btn btn-warning">
-                Extender
-              </div>
-            </button>
-            <button class="boton boton-activo">
-              Vendedores
-              <div onclick="showModal('{{ i }}')" class="btn btn-warning">
-                Extender
-              </div>
-            </button>
-            <button class="boton boton-activo">
-              Inventario
-              <div onclick="showModal('{{ i }}')" class="btn btn-warning">
-                Extender
-              </div>
-            </button>
+          <div class="botones" id="modulos-container">
           </div>
         </div>
       </div>
@@ -104,13 +94,13 @@
 
             <form action="#" method="post" style="width: 100%">
               <div class="card">
-                <div class="card-header">Módulo de cotización</div>
+                <div class="card-header" id="nombre_modulo_modal"></div>
                 <div class="card-body">
                   <div class="btn-wrapper">
-                    <a href="" class="btn btn-success">Extender 1 mes(es)</a>
-                    <a href="" class="btn btn-success">Extender 3 mes(es)</a>
-                    <a href="" class="btn btn-success">Extender 6 mes(es)</a>
-                    <a href="" class="btn btn-success">Extender 12 mes(es)</a>
+                    <a data-extension="1" class="btn btn-success extend-btn">Extender 1 mes(es)</a>
+                    <a data-extension="3" class="btn btn-success extend-btn">Extender 3 mes(es)</a>
+                    <a data-extension="6" class="btn btn-success extend-btn">Extender 6 mes(es)</a>
+                    <a data-extension="12" class="btn btn-success extend-btn">Extender 12 mes(es)</a>
                   </div>
                 </div>
               </div>

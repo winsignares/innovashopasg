@@ -26,13 +26,21 @@
 
         <!-- * MODAL -->
         <link rel="stylesheet" href="/static/css/empresa/empresa-modal.css">
-        <script src="/static/js/empresa/empresa-modal.js" defer></script>
+        <!-- <script src="/static/js/empresa/empresa-modal.js" defer></script> -->
 
         <!-- ! propio -->
         <link rel="stylesheet" href="/static/css/empresa/empresa-ordenes-ver.css">
 
         <!-- * Iconos font awesome -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k4e0s16K3+HXadlk2vdq33yGT5r4msbR2AZd0Jb41e/WWWeC73RJkmbsUKM5Xv6m" crossorigin="anonymous"> -->
+
+        
+        <!-- * AXIOS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- * Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- ! JS -->
+        <script src="/static/js/empresa/empresa-ordenes-ver.js" defer></script>
     </head>
 
     <body>
@@ -55,52 +63,22 @@
                     <div class="main-orden-wrapper">
                         <h2>Detalle de la orden de compra</h2>
                         <div class="orden-details">
-                            <p><b>Código: </b>453232</p>
-                            <p><b>Usuario emisor: </b>Juan Juanito - CC: 1003124434</p>
-
-                            <p><b>Estado: </b>Completada</p>
-                            <p><b>Fecha emisión: </b>14/abril/2024 09:00:00</p>
-                            <p><b>Fecha completado: </b>17/abril/2024 08:30:00</p>
-
-                            <hr>
-                            <p><b>IVA (19%): $</b>400.000</p>
-                            <p><b>Total sin IVA: $</b>14.600.000</p>
-                            <p><b>Total: $</b>15.000.000</p>
+                            <!-- Los detalles de la orden se llenarán aquí -->
                         </div>
-
+            
                         <h4>Listado de productos:</h4>
-
+            
                         <table class="table table-striped table-hover">
                             <thead>
-                              <tr>
-                                <th scope="col">Nombre</th>
-                                <th scope="col">Descripción</th>
-                                <th scope="col">Código</th>
-                                <th scope="col">Valor unitario:</th>
-
-                                <th scope="col">Ver</th>
-                              </tr>
+                                <tr>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Descripción</th>
+                                    <th scope="col">Código</th>
+                                    <th scope="col">Valor unitario</th>
+                                </tr>
                             </thead>
-
                             <tbody>
-                                {%for i in range(5)%}
-                                    <tr>
-                                        <th scope="row">Cámara HK vision PRO 2</th>
-                                        <td>Cámara con visión nocturna</td>
-                                        <td>324 2112 42432 342</td>
-                                        <td>$ 2.400.000</td>
-
-                                        <td>
-                                            <a
-                                                onclick="showModal('{{ i }}')"
-                                                class="btn btn-primary"
-                                                title="Ver producto en detalle"
-                                            >
-                                                <i class="fas fa-eye"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                {%endfor%}
+                                <!-- Las filas de productos se llenarán aquí -->
                             </tbody>
                         </table>
                     </div>

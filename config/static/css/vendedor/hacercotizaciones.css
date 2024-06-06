@@ -1,5 +1,5 @@
 body {
-  background-color: #f0f0f0;
+  background-color: #d4d4d4;
   font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
 }
@@ -165,10 +165,13 @@ table tbody tr:nth-child(even) {
   text-align: center;
   margin-top: 3px;
 }
-#search {
+.search {
   width: 100px;
   height: 25px;
-  border-radius: 10px;
+  border-radius: 5px;
+  color: #ddd;
+  background-color: #38b6a0;
+  border-style: none;
 }
 #butombuscar {
   height: 25px;
@@ -262,8 +265,7 @@ table tbody tr:nth-child(even) {
   gap: 10px;
 }
 
-.comprar-btn,
-.cotizacion-btn {
+.crearcotizacion {
   padding: 10px 20px;
   border: none;
   border-radius: 5px;
@@ -273,7 +275,7 @@ table tbody tr:nth-child(even) {
   cursor: pointer;
 }
 
-.comprar-btn:hover,
-.cotizacion-btn:hover {
+.crearcotizacion:hover,
+.crearcotizacion:hover {
   background-color: #0056b3;
 }

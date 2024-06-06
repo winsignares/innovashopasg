@@ -31,7 +31,16 @@
       rel="stylesheet"
       href="/static/css/administrador/barra-de-navegacion.css"
     />
-    <script src="/static/js/vendedor/vendedor.js" defer></script>
+
+    <!-- <script src="/static/js/vendedor/vendedor.js" defer></script> -->
+
+    <!-- * AXIOS -->
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <!-- * Sweet Alert -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+    <!-- ! JS EMPRESA -->
+    <script src="/static/js/administrador/empresa-listado.js" defer></script>
   </head>
   <body>
     <div class="container-main">
@@ -58,47 +67,83 @@
           <div class="table-wrapper">
             <a href="/administrador/crearempresa" class="btn btn-warning">Crear empresa</a>
             <hr>
-            <h4>Listado de empresas:</h4>
+            <h4>Listado de empresass:</h4>
             <br>
 
+            <!-- ! TABLA -->
             <table class="table table-striped table-hover">
               <!-- <h4>Listado de empresas</h4> -->
   
               <thead>
                 <tr>
                   <th scope="col">Nombre</th>
-                  <th scope="col">Código</th>
                   <th scope="col">NIT</th>
                   <th scope="col">Correo electrónico</th>
+                  <th scope="col">Porcentaje ganancia</th>
+                  <th scope="col">Iva establecido</th>
+                  <th scope="col">Descuento general</th>
+                  <th scope="col">Licencia vigente hasta</th>
   
-                  <th scope="col">Ver</th>
+                  <th scope="col">Editar</th>
                   <th scope="col">Eliminar</th>
                 </tr>
               </thead>
   
-              <tbody>
-                {%for i in range(5)%}
-                <tr>
-                  <th scope="row">Tecnología y Diseño S.A.S</th>
-                  <td>42544545</td>
-                  <td>00194828392</td>
-                  <td>tec&dis@gmail.com</td>
-  
-                  <td>
-                    <a  href="/administrador/modulos" class="btn btn-primary" title="Ver producto en detalle">
-                      <i class="fas fa-eye"></i>
-                    </a>
-                  </td>
-  
-                  <td>
-                    <a class="btn btn-danger" title="Ver producto en detalle">
-                      <i class="fas fa-trash"></i>
-                    </a>
-                  </td>
-                </tr>
-                {%endfor%}
+              <tbody id="empresas-tbody">
               </tbody>
             </table>
+
+            <!-- ! MODAL -->
+            <div id="modalEmpresa" class="modal">
+              <div class="modal-content">
+                <span class="close">&times;</span>
+                <div class="empresa-modal">
+                  <h3>Editar Empresa</h3>
+                  <form id="empresaForm" style="width: 100%;">
+                    <div class="card">
+                      <div class="card-header">
+                        Información de la Empresa
+                      </div>
+                      <div class="card-body">
+                        <div class="form-group">
+                          <label for="nombre">Nombre:</label>
+                          <input type="text" class="form-control" id="nombre" name="nombre">
+                        </div>
+                        <div class="form-group">
+                          <label for="nit">NIT:</label>
+                          <input type="text" class="form-control" id="nit" name="nit">
+                        </div>
+                        <div class="form-group">
+                          <label for="correo">Correo Electrónico:</label>
+                          <input type="email" class="form-control" id="correo" name="correo">
+                        </div>
+                        <div class="form-group">
+                          <label for="porcentaje_ganancia">Porcentaje de Ganancia:</label>
+                          <input type="number" class="form-control" id="porcentaje_ganancia" name="porcentaje_ganancia">
+                        </div>
+                        <div class="form-group">
+                          <label for="iva_establecido">IVA Establecido:</label>
+                          <input type="number" class="form-control" id="iva_establecido" name="iva_establecido">
+                        </div>
+                        <div class="form-group">
+                          <label for="descuento_general">Descuento General:</label>
+                          <input type="number" class="form-control" id="descuento_general" name="descuento_general">
+                        </div>
+                        <div class="form-group">
+                          <label for="vigencia_licencia_fin">Vigencia de Licencia (fin):</label>
+                          <input type="text" class="form-control" id="vigencia_licencia_fin" name="vigencia_licencia_fin">
+                        </div>
+                      </div>
+                    </div>
+                  </form>
+                  <br>
+                  <a class="btn btn-success" id="guardarCambiosBtn">
+                    <i class="fas fa-check"></i> Guardar cambios
+                  </a>
+                </div>
+              </div>
+            </div>
+            
           </div>
         </div>
       </div>

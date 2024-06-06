@@ -11,6 +11,7 @@ body {
   grid-template-columns: 15% 85%;
   height: 100%;
   width: 100%;
+
 }
 
 .maincontent {
@@ -19,6 +20,8 @@ body {
   grid-template-rows: 30% 70%;
   height: 100%;
   width: 100%;
+
+
 }
 
 .calendar {
@@ -32,8 +35,12 @@ body {
 
 .container-sub{
   width: 100%;
-  padding: 4%;
+  padding: 2%;
   box-sizing: border-box;
+}
+
+.info-empresa p{
+  margin: 0;
 }
 
 .navigation {
@@ -222,10 +229,6 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: center;
-}
-
-.boton-activo::after{
-  content: 'Fecha expiración: 12/dic/2025';
 }
 
 .boton-inactivo{

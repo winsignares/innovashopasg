@@ -84,7 +84,7 @@ body{
     text-align: center;
     margin-top: 3px;
   }
-  #search{
+  .search{
     width: 100px;
     height: 25px;
     border-radius: 10px;
@@ -92,7 +92,7 @@ body{
   #butombuscar{
     height: 25px;
     width: 70px;
-    border-radius:10px ;
+    border-radius:5px ;
     border-style: none;
     background-color: #38b6a0;
    color: white;

@@ -1,76 +1,92 @@
-<div class="navegation">
-  <div class="userlogin">
-    <div class="profileuser"></div>
-    <div class="nombreuser">
-      andres pollito
-      <div class="cargo">vendedor</div>
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <script src="/static/js/vendedor/barra-nav-vendedor.js" defer></script>
+  </head>
+  <body>
+    <div class="navegation">
+      <div class="userlogin">
+        <div class="profileuser"></div>
+        <div class="nombreuser">
+          andres pollito
+          <div class="cargo">vendedor</div>
+        </div>
+      </div>
+
+      <div class="navegationcontet">
+        <a
+          class="intemnavegation"
+          id="home"
+          href="{{ url_for('home_vendedor') }}"
+        >
+          <img class="imgnav" src="/static/imgs/vendedor/home.png" alt="" />
+          <label>Home</label>
+        </a>
+
+        <a
+          class="intemnavegation"
+          ,
+          id="productos"
+          href="{{ url_for('productos_vendedor') }}"
+        >
+          <img
+            class="imgnav"
+            src="/static/imgs/vendedor/productos.png"
+            alt=""
+          />Productos
+        </a>
+
+        <a
+          class="intemnavegation"
+          ,
+          id="cliente"
+          href="{{ url_for('clientes_vendedor') }}"
+        >
+          <img
+            class="imgnav"
+            src="/static/imgs/vendedor/perfil.png"
+            alt=""
+          />Cliente
+        </a>
+
+        <a
+          class="intemnavegation"
+          ,
+          id="cotizaciones"
+          href="{{ url_for('cotizaciones_vendedor') }}"
+        >
+          <img
+            class="imgnav"
+            src="/static/imgs/vendedor/cotizaciones.png"
+            alt=""
+          />Cotizaciones
+        </a>
+
+        <a
+          class="intemnavegation"
+          id="informes"
+          href="{{ url_for('informes_vendedor') }}"
+        >
+          <img
+            class="imgnav"
+            src="/static/imgs/vendedor/informes.png"
+            alt=""
+          />Informes
+        </a>
+
+        <a class="intemnavegation" id="informes" onclick="logout()">
+          <i
+            style="font-size: 25px; margin-left: 30px"
+            class="fas fa-door-open"
+          ></i>
+
+          <label> Cerrar sesión </label>
+        </a>
+      </div>
     </div>
-  </div>
-
-  <div class="navegationcontet">
-    <a class="intemnavegation" id="home" href="{{ url_for('home_vendedor') }}">
-      <img class="imgnav" src="/static/imgs/vendedor/home.png" alt="" />
-      <label>Home</label>
-    </a>
-
-    <a
-      class="intemnavegation"
-      ,
-      id="productos"
-      href="{{ url_for('productos_vendedor') }}"
-    >
-      <img
-        class="imgnav"
-        src="/static/imgs/vendedor/productos.png"
-        alt=""
-      />Productos
-    </a>
-
-    <a
-      class="intemnavegation"
-      ,
-      id="cliente"
-      href="{{ url_for('clientes_vendedor') }}"
-    >
-      <img
-        class="imgnav"
-        src="/static/imgs/vendedor/perfil.png"
-        alt=""
-      />Cliente
-    </a>
-
-    <a
-      class="intemnavegation"
-      ,
-      id="cotizaciones"
-      href="{{ url_for('cotizaciones_vendedor') }}"
-    >
-      <img
-        class="imgnav"
-        src="/static/imgs/vendedor/cotizaciones.png"
-        alt=""
-      />Cotizaciones
-    </a>
-
-    <a
-      class="intemnavegation"
-      ,
-      id="informes"
-      href="{{ url_for('informes_vendedor') }}"
-    >
-      <img
-        class="imgnav"
-        src="/static/imgs/vendedor/informes.png"
-        alt=""
-      />Informes
-    </a>
-  </div>
-
-  <!-- <div class="intemnavegation" id="configuracion">
-    <img
-      class="imgnav"
-      src="/static/imgs/vendedor/config.png"
-      alt=""
-    />configuration
-  </div> -->
-</div>
+  </body>
+</html>

@@ -26,14 +26,23 @@
         <link rel="stylesheet" href="/static/css/empresa/big-banner-empresa.css">
 
         <!-- ! MODAL -->
-        <script src="/static/js/empresa/empresa-modal.js" defer></script>
+        <!-- <script src="/static/js/empresa/empresa-modal.js" defer></script> -->
         <link rel="stylesheet" href="/static/css/empresa/empresa-modal.css">
 
         <!-- ! propio -->
         <link rel="stylesheet" href="/static/css/empresa/empresa-vendedores.css">
 
         <!-- * Iconos font awesome -->
-        <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k4e0s16K3+HXadlk2vdq33yGT5r4msbR2AZd0Jb41e/WWWeC73RJkmbsUKM5Xv6m" crossorigin="anonymous"> -->
+
+        
+        <!-- * COTIZACION -->
+        <!-- * AXIOS -->
+        <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+        <!-- * Sweet Alert -->
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <!-- ! JS -->
+        <script src="/static/js/empresa/empresa-vendedores.js" defer></script>
     </head>
 
     <body>
@@ -81,83 +90,62 @@
                             </thead>
 
                             <tbody>
-                                {%for i in range(5)%}
-                                    <tr>
-                                        <th scope="row">1</th>
-                                        <td>Juan Juanito</td>
-                                        <td>Perez Perea</td>
-                                        <td>1003462838</td>
-                                        <td>Calle 34 #45 - 56</td>
-                                        <td>juanp2024</td>
-
-                                        <td>
-                                            <a
-                                                onclick="showModal('{{ i }}')"
-                                                class="btn btn-warning"
-                                                title="Ver orden de compra"
-                                            >
-                                                <i class="fas fa-pen"></i>
-                                            </a>
-                                        </td>
-                                    </tr>
-                                {%endfor%}
                             </tbody>
                         </table>
                     </div>
                 </div>  
 
                 
-                <div id="modalProductos" class="modal">
+                <!-- MODAL EDICION -->
+                <div id="modalVendedor" class="modal">
                     <div class="modal-content">
                         <span class="close">&times;</span>
-                        
-                        <div class="producto-modal">
-                            <h3>Editar vendedor</h3>
 
-                            <form action="#" method="post" style="width: 100%;">
-                                <div class="card">
-                                    <div class="card-header">
-                                        Información del vendedor
-                                    </div>
-                                    <div class="card-body">
-                                        <div class="form-group">
-                                            <label for="nombre">Nombre:</label>
-                                            <input type="text" class="form-control" id="nombre" name="nombre" value="Juan Juanito">
-                                        </div>
+                        <div class="vendedor-modal">
+                        <h3>Editar Vendedor</h3>
 
-                                        <div class="form-group">
-                                            <label for="nit">Apellidos:</label>
-                                            <input type="text" class="form-control" id="nit" name="nit" value="Perez Perea">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="nit">Cédula:</label>
-                                            <input type="text" class="form-control" id="nit" name="nit" value="1003150392">
-                                        </div>
-
-                                        <div class="form-group">
-                                            <label for="direccion">Dirección:</label>
-                                            <input type="text" class="form-control" id="direccion" name="direccion" value="Calle 34 #45 - 56">
-                                        </div>
-                                        <div class="form-group">
-                                            <label for="telefono">Usuario:</label>
-                                            <input type="tel" class="form-control" id="telefono" name="telefono" value="juanp2024">
-                                        </div>
-                                    </div>
+                        <form id="editarVendedorForm" action="#" method="post" style="width: 100%">
+                            <div class="card">
+                            <div class="card-header">Información del Vendedor</div>
+                            <div class="card-body">
+                                <div class="form-group">
+                                <label for="nombre">Nombre:</label>
+                                <input type="text" class="form-control" id="nombre" name="nombre" />
                                 </div>
-                            </form>
+                                <div class="form-group">
+                                <label for="apellidos">Apellidos:</label>
+                                <input type="text" class="form-control" id="apellidos" name="apellidos" />
+                                </div>
+                                <div class="form-group">
+                                <label for="cedula">Cédula:</label>
+                                <input type="text" class="form-control" id="cedula" name="cedula" />
+                                </div>
+                                <div class="form-group">
+                                <label for="direccion">Dirección:</label>
+                                <input type="text" class="form-control" id="direccion" name="direccion" />
+                                </div>
+                                <div class="form-group">
+                                <label for="telefono">Teléfono:</label>
+                                <input type="text" class="form-control" id="telefono" name="telefono" />
+                                </div>
+                                <div class="form-group">
+                                <label for="usuario">Usuario:</label>
+                                <input type="text" class="form-control" id="usuario" name="usuario" />
+                                </div>
+                            </div>
+                            </div>
+                        </form>
 
-                            <br>
-                            
-                            <a
-                                class="btn btn-success"
-                            >
-                                <i class="fas fa-check"></i>
-                                Guardar cambios
-                            </a>
+                        <br />
+
+                        <button id="guardarCambios" class="btn btn-success">
+                            <i class="fas fa-check"></i>
+                            Guardar cambios
+                        </button>
                         </div>
                     </div>
                 </div>
+  
             </div>
             
         </div>
