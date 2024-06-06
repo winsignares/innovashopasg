@@ -12,3 +12,27 @@ SI NO SE TIENE EL PROYECTO INSTALADO:
 
 SI SE TIENE EL PROYECTO INSTALADO
 paso 4, 5, 6 y 8
+
+INSTRUCCIONES DESPUÉS DE INSTALACIÓN:
+
+El sistema necesita una conexión activa de los servicios apache y mysql, mantener activas estas conexiones.
+
+Por comodidad de prueba se incluye un archivo de extensión .SQL en la carpeta con datos de prueba que pueden ser usados para probar el sistema en su totalidad.
+Este archivo puede ser importado en el administrador phpMyAdmin de la base de datos de mysql.
+
+Usuario incluidos:
+1. Nombre: admin
+   Usuario: admin
+   Contraseña: admin
+
+2. Nombre: empresa
+   Usuario: empresa
+   Contraseña: empresa
+
+3. Nombre: cliente
+   Usuario: cliente
+   Contraseña: cliente
+
+4. Nombre: vendedor
+   Usuario: vendedor
+   Contraseña: vendedor
