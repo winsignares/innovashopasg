@@ -330,6 +330,7 @@ function actualizarStock(boton) {
     .post("/api/actualizar", {
       producto_id: productoId,
       cantidad: cantidad,
+      id_usuario_emisor: localStorage.getItem("id_usuario")
     })
     .then((response) => {
       Swal.fire({

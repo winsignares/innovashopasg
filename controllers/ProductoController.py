@@ -78,6 +78,7 @@ def actualizar_stock():
     data = request.json
     id_producto = data.get('producto_id')
     cantidad = data.get('cantidad')
+    id_usuario_emisor = data.get('id_usuario_emisor')
   
 
     producto = Producto.query.get(id_producto)
@@ -94,7 +95,7 @@ def actualizar_stock():
 
     nueva_orden = OrdenCompra(
         fecha=datetime .now(),
-        id_usuario_emisor=30,  # Cambiar según la lógica de tu aplicación
+        id_usuario_emisor=id_usuario_emisor,  # Cambiar según la lógica de tu aplicación
         estado=1
     )
 
